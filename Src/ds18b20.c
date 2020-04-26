@@ -285,10 +285,7 @@ void DS18B20_Init(DS18B20_Resolution_t resolution)
 
 	for(j = 0; j < i; j++)
 	{
-		if (DS18B20_Is((uint8_t*)&ds18b20[j].Address))
-		{
-			DS18B20_SetResolution(j, resolution); // Set the initial resolution to sensor
-		}
+		DS18B20_SetResolution(j, resolution); // Set the initial resolution to sensor
 
 		DS18B20_StartAll(); // Start conversion on all sensors
 	}
