@@ -94,9 +94,7 @@ void OneWire_WriteBit(OneWire_t* onewire, uint8_t bit)
 		OneWire_Delay(6);
 		
 		OneWire_BusInputDirection(onewire); // Release bus - bit high by pullup
-		
 		OneWire_Delay(64);
-		OneWire_BusInputDirection(onewire); //Release bus
 	} 
 	else // Send '0'
 	{
@@ -105,9 +103,7 @@ void OneWire_WriteBit(OneWire_t* onewire, uint8_t bit)
 		OneWire_Delay(60);
 		
 		OneWire_BusInputDirection(onewire); // Release bus - bit high by pullup
-		
 		OneWire_Delay(10);
-		OneWire_BusInputDirection(onewire); // Release bus
 	}
 }
 
